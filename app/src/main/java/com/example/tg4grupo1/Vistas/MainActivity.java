@@ -1,8 +1,10 @@
-package com.example.tg4grupo1;
+package com.example.tg4grupo1.Vistas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.tg4grupo1.R;
 
 public class MainActivity extends AppCompatActivity {
 

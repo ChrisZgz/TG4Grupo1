@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 
-import com.example.tg4grupo1.MainActivity;
 import com.example.tg4grupo1.R;
 
 public class Splash extends AppCompatActivity {
