@@ -35,21 +35,21 @@
 
     #Estructuras de proyecto
         #Actividades
-            #(Nicolas Del Amo / Codigo - Jefe de Proyecto)
-                Se encarga principalmente de organizar y tomar las decisiones del equipo
-                    Recursos / Programación / BBDD
+            #(Nicolas Del Amo / Código (Vistas y JSON))
+                Se encargará de la gestión del archivo JSON y la programación de las vistas
+                    Programación / JSON / Vistas
 
-            #(Daniel Alvaro del Rio / Codigo)
-                Se encargará principalmente de la programacion y estructurar las actividades
-                    Fragments / Correccion de errores / JSON
-
-            #(Christian Martinez / Interfaz)
+            #(Daniel Alvaro del Rio / Interfaz)
                 Se encargará de la interfaz y las decisiones de diseño
-                    Interfaz / Creacion de Diseño
+                    Diseño
+
+            #(Christian Martinez / Jefe de Proyecto - Código(BBDD y Adapter))
+                Se encargará de la gestión de la Base de datos y la programación del adapter
+                    Programación / BBDD / Adapter
 
             #(Miguel Lizaranzu / Interfaz)
                 Se encargará de ayudar al deseño de las interfazes
-                    Diseño / Alert dialogs
+                    Diseño / 
 
         # Controles:
             - Tres botones de menu de fragments que despliegan diferentes aletrs dialog
