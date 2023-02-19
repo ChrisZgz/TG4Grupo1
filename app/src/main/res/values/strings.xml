@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TG4Grupo1</string>
+    <string name="olvidar_contrasena"><a href="https://www.example.com">Has olvidado tu usuario o tu contraseña?</a></string>
 </resources>

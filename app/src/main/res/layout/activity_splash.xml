@@ -4,6 +4,99 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#292C33"
     tools:context=".Vistas.Splash">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="INICIAR SESIÓN"
+        android:textColor="#E1E4EB"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Nombre de la cuenta de Steam"
+        android:textColor="#E1E4EB"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tNombre"
+        app:layout_constraintEnd_toEndOf="@+id/tNombre"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tNombre" />
+
+    <TextView
+        android:id="@+id/tLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="TextView"
+        android:textColor="#E1E4EB"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/bntInicioSesion"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/bntInicioSesion"
+        app:layout_constraintTop_toBottomOf="@+id/bntInicioSesion" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:autoLink="web"
+        android:text="Contraseña"
+        android:textColor="#E1E4EB"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword" />
+
+    <EditText
+        android:id="@+id/tNombre"
+        android:layout_width="363dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="164dp"
+        android:background="#1F2229"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bntInicioSesion"
+        android:layout_width="363dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="32dp"
+        android:background="#105EFF"
+        android:text="Iniciar Sesión"
+        android:textColor="#E1E4EB"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="363dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="48dp"
+        android:background="#1F2229"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/tNombre"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/tNombre"
+        app:layout_constraintTop_toBottomOf="@+id/tNombre" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
