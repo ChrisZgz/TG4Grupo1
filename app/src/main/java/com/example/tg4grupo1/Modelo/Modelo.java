@@ -24,6 +24,9 @@ public class Modelo {
         this.comprados = comprados;
     }
 
+    public Modelo() {
+    }
+
     public String getId() {
         return id;
     }
