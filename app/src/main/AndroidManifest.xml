@@ -23,7 +23,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Vistas.MainActivity"
+            android:name=".Vistas.Main"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
