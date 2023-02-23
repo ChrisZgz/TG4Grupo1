@@ -2,6 +2,8 @@ package com.example.tg4grupo1.Utilidades;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.tg4grupo1.Bbdd.DownloadJson;
 
@@ -15,12 +17,14 @@ public class Metodos {
 
   /*  public static void descargarJson(Context context) {
 
-        DownloadJson json = new DownloadJson();
-        try {
-            json.execute("https://www.zaragoza.es/sede/servicio/urbanismo-infraestructuras/equipamiento/parada-taxi.json?rf=html&srsname=wgs84&start=0&rows=1000&distance=500").get();
-        } catch (ExecutionException | InterruptedException e) {
-            e.printStackTrace();
-        }
+       DownloadJson.metercosas(this);
+            DownloadJson json = new DownloadJson();
+
+            try {
+                json.execute("https://www.zaragoza.es/sede/servicio/urbanismo-infraestructuras/equipamiento/parada-taxi.json?rf=html&srsname=wgs84&start=0&rows=1000&distance=500").get();
+            } catch (ExecutionException | InterruptedException e) {
+                e.printStackTrace();
+            }
     }*/
 
     public static final String DBNAME = "test.db";
@@ -49,5 +53,17 @@ public class Metodos {
                 null,
                 SQLiteDatabase.OPEN_READWRITE);
         return db;
+    }
+
+    public static void login(EditText usuario, EditText contrasena) {
+        if (usuario.getText().equals("")) {
+            Toast.makeText(null, "El campo usuario no puede quedar vacio", Toast.LENGTH_SHORT).show();
+        } else if (contrasena.getText().equals("")) {
+            Toast.makeText(null, "El campo contraseña no puede quedar vacio", Toast.LENGTH_SHORT).show();
+        }
+
+        if (usuario.getText().equals("admin") && contrasena.getText().equals("admin")) {
+            Toast.makeText(null, "Correcto!", Toast.LENGTH_SHORT).show();
+        }
     }
 }
