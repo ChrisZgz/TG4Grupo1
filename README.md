@@ -1,17 +1,12 @@
-# TG3Grupo1
+# TG4Grupo1
 ## Introducción
-    
-    #CAMBIAR CONTENIDO DE README
+
     # Estructuras de aplicacion
 
-        La aplicacion se divide en diversas carpetas donde cada uno representa una funcion diferente al resto
-        cada packete contiene sus clases correspondiente y estas se dividen en Codigo y Interfaz,
-        cada participante del grupo tiene asignado o Codigo o Interfaz como su prncipal tarea
+        La aplicacion se divide en diversas carpetas donde cada uno representa una funcion 
+        diferente al resto cada paquete contiene sus clases correspondientes y estas se dividen 
+        en Codigo y Interfaz.
 
-        Adapters {
-            SerieAdapter : Esta clse genera los metodos necesarios para poder viisualizar en la 
-            aplicacion la informacion de la base de datos
-        }
 
         BBDD {
             Aqui se encuentran todas las clases que conectan con la base de datos y interactuan de alguna manera con esta
@@ -20,14 +15,14 @@
             ModeloHelper : Crea la base de datos 
         }
 
-        Fragments {
-            ContenidoGeneral : 
-            Descripcion : 
+        Utilidades {
+            Métodos: Aqui se encuentran los métodos que tienden a utilizarse en varias clases, para
+            no repetir código
         }
 
         Vista {
-            Inicio: Aqui se muestra el inicio de la aplicacion el cual muestra los datos de la tabla
-            Splash : La presentacion de la aplicacion antes de la inicializacion de esta 
+            Main: Aqui se encuentra un ScrollView con una amplia selección de juegos de Steam
+            Splash: Esta sería la pantalla de login
             
         }
 
@@ -37,42 +32,40 @@
         #Actividades
             #(Nicolas Del Amo / Código (Vistas y JSON))
                 Se encargará de la gestión del archivo JSON y la programación de las vistas
-                    Programación / JSON / Vistas
+                    Programación / AlertDialogs / Vistas
 
             #(Daniel Alvaro del Rio / Interfaz)
                 Se encargará de la interfaz y las decisiones de diseño
-                    Diseño
+                    Diseño / ActivityMain / 
 
             #(Christian Martinez / Jefe de Proyecto - Código(BBDD y Adapter))
                 Se encargará de la gestión de la Base de datos y la programación del adapter
-                    Programación / BBDD / Adapter
+                    Programación / BBDD / Utilidades
 
             #(Miguel Lizaranzu / Interfaz)
                 Se encargará de ayudar al deseño de las interfazes
-                    Diseño / 
+                    Diseño / Alert Dialogs / 
 
         # Controles:
-            - Tres botones de menu de fragments que despliegan diferentes aletrs dialog
-
-        # Lógica de negocio
-            - La aplicacion mantendra un registro de toda la base de datos
+            - Un boton en el login para poder ir a la biblioteca
+            -
 
     #Descripción del proyecto
         #Descripción general
-            Nuestra aplicacion consiste en una base de datos con diseño de Cyberpunk 2077 la cual
-            guarda registros de paradas de taxi para ello guarda una id que identifica el registro,
-            la calle donde se detiene, el dia de la ultima actualizacion, las cordenadas y si se 
-            desea un icono o foto representativo
+            La aplicación consiste en una biblioteca de Steam, empezará con una pantalla de login, y
+            si los datos introducidos son correctos, nos llevará directamente a la biblioteca, donde 
+            se podrá ver una gran variedad de juegos
             
         #Descripción detallada de cada uno
             (Nicolas del amo)
-            [Se ocupó de liderar el grupo, crear el adapter y los modelos de las consultas ]
+            [Se ocupa de la programación de las vistas así como de la programación de los alertdialogs
+            y la creación del modelo de la biblioteca]
 
             (Daniel del rio)
-            [Se ocupó completamente de todo el JSON y de arreglar los errores que venina con este]
+            [Se ocupa de las ideas de diseño, la interfaz y lo que conlleva(estilos, fuentes, etc...)]
 
             (Christian martinez)
-            [Se ocupó de la interfaz principalemnte de como seria la tematica]
+            [Se ocupa de la gestión del JSON y una clase de métodos a utilizar en la aplicación]
 
             (Miguel Lizaranzu)
-            [Se ocupó de Asistir en el diseño y los alert dialog]
+            [Se ocupa de la creación de los alert dialogs y asistir en el diseño de la interfaz]

@@ -2,10 +2,13 @@ package com.example.tg4grupo1.Bbdd;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import android.os.Handler;
-import android.os.Looper;
 
-import java.io.File;
+import com.example.tg4grupo1.Modelo.Modelo;
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -13,24 +16,23 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DownloadJson /*extends AsyncTask<String, Void, String>*/ {
+public class DownloadJson extends AsyncTask<String, Void, String> {
 
-    /*
+
 
     private static Context CONTEXT;
     private static String result = "";
-    public static File iconoImagen;
     public static ArrayList<Modelo> modelos = new ArrayList<>();
 
-    public static void metercosas(Context context) {
+    public static void insertarDatos(Context context) {
         CONTEXT = context;
     }
 
     @Override
     protected void onPreExecute(){
-        if (modelos.size() != 0){
+      /*  if (modelos.size() != 0){
             AlertDialogs.AlertProgres(CONTEXT);
-        }
+        }*/
     }
 
     @Override
@@ -70,16 +72,17 @@ public class DownloadJson /*extends AsyncTask<String, Void, String>*/ {
         for (int i = 0; i < lista.size(); i++) {
             objeto.add((JsonObject) lista.get(i));
         }
-        List<JsonObject> geome = new ArrayList<>();
-        for (int i = 0; i < objeto.size(); i++) {
-            geome.add((JsonObject) objeto.get(i).get("geometry"));
-            //geome.get(i).get("coordinates");
 
+        for (int i = 0; i < objeto.size(); i++) {
             modelos.add(new Modelo(objeto.get(i).get("id").toString(),
                     objeto.get(i).get("title").toString(),
-                    objeto.get(i).get("lastUpdated").toString(),
-                    geome.get(i).get("coordinates").toString(),
-                    objeto.get(i).get("icon").toString()
+                    objeto.get(i).get("description").toString(),
+                    objeto.get(i).get("developer").toString(),
+                    objeto.get(i).get("publisher").toString(),
+                    objeto.get(i).get("genre").toString(),
+                    objeto.get(i).get("tags").toString(),
+                    objeto.get(i).get("categories").toString(),
+                    objeto.get(i).get("purchased").toString()
             ));
         }
         //aqui lo que hacemos es llamar el metodo para meter dentro de iconoImagen el
@@ -94,15 +97,12 @@ public class DownloadJson /*extends AsyncTask<String, Void, String>*/ {
 //        modeloHelper.getWritableDatabase();
 
         ModeloAdo modeloAdo = new ModeloAdo(CONTEXT);
-        modeloAdo.insertar(modelos);
+        modeloAdo.insertarJuegos(modelos);
     }
 
-
-    public void downloadImage(String imageUrl) {
-    }
     private static Boolean bb = false;
     @Override
-    protected void onPostExecute(String bitmap) {
+    protected void onPostExecute(String bitmap) { /*
         if (bb){
             Handler handler = new Handler(Looper.myLooper());
             handler.postDelayed(()->{
@@ -110,5 +110,6 @@ public class DownloadJson /*extends AsyncTask<String, Void, String>*/ {
             },2000);
         }
         bb = true;
-    }*/
+        */
+    }
 }
