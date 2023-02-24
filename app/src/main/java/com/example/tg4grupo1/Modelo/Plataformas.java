@@ -1,37 +1,50 @@
 package com.example.tg4grupo1.Modelo;
 
 public class Plataformas {
-    private boolean Windows;
-    private boolean Mac;
-    private boolean Linux;
+    private boolean windows;
+    private boolean mac;
+    private boolean linux;
 
     public Plataformas(boolean windows, boolean mac, boolean linux) {
-        Windows = windows;
-        Mac = mac;
-        Linux = linux;
+        this.windows = windows;
+        this.mac = mac;
+        this.linux = linux;
     }
 
     public boolean isWindows() {
-        return Windows;
+        return windows;
     }
 
     public void setWindows(boolean windows) {
-        Windows = windows;
+        this.windows = windows;
     }
 
     public boolean isMac() {
-        return Mac;
+        return mac;
     }
 
     public void setMac(boolean mac) {
-        Mac = mac;
+        this.mac = mac;
     }
 
     public boolean isLinux() {
-        return Linux;
+        return linux;
     }
 
     public void setLinux(boolean linux) {
-        Linux = linux;
+        this.linux = linux;
+    }
+
+    @Override
+    public String toString() {
+        String plat = "";
+        if(isWindows()){
+            plat += "Windows, ";
+        }if(isMac()){
+            plat += "Mac, ";
+        }if(isLinux()){
+            plat += "Linx, ";
+        }
+        return plat;
     }
 }
