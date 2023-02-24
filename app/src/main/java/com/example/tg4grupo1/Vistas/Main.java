@@ -10,6 +10,7 @@ import android.text.method.LinkMovementMethod;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.tg4grupo1.R;
 
@@ -35,14 +36,15 @@ public class Main extends AppCompatActivity {
         
 
         iniciar.setOnClickListener(v->{
-            if(!usuario.getText().toString().equals("usuario") ){
+            if (usuario.getText().equals("")) {
+                Toast.makeText(null, "El campo usuario no puede quedar vacio", Toast.LENGTH_SHORT).show();
+            } else if (contrasena.getText().equals("")) {
+                Toast.makeText(null, "El campo contraseña no puede quedar vacio", Toast.LENGTH_SHORT).show();
+            }
 
-            }else if(!contrasena.getText().toString().equals("admin") ){
-
-            }else{
-                /*Intent intent = new Intent(getApplicationContext(), Main.class);
-                startActivity(intent);
-                finish();*/            }
+            if (usuario.getText().equals("admin") && contrasena.getText().equals("admin")) {
+                Toast.makeText(null, "Correcto!", Toast.LENGTH_SHORT).show();
+            }
         });
     }
 }

@@ -1,78 +1,105 @@
 package com.example.tg4grupo1.Modelo;
 
 public class Modelo {
-    private String id;
-    private String titulo;
-    private String descripcion;
-    private String desarrollador;
-    private String publicador;
-    private String genero;
+    //esto esta en fasse de prueba darme mas tiempo XD
+    private String appid;
+    private String name;
+    private String short_description;
+    private String developer;
+    private String publisher;
+    private String genre;
     private String tags;
-    private String categorias;
-    private String comprados;
+    private String type;
+    private String category;
+    private String owners;
+    private String positive;
+    private String negative;
+    private String price;
+    private String initialprice;
+    private String discount;
+    private String ccu;
+    private String languagues;
+    private Plataformas platforms;
+    private String release_date;
+    private String requiered_age;
+    private String website;
+    private String header_image;
 
-    public Modelo(String id, String titulo, String descripcion, String desarrollador,
-                  String publicador, String genero, String tags, String categorias, String comprados) {
-        this.id = id;
-        this.titulo = titulo;
-        this.descripcion = descripcion;
-        this.desarrollador = desarrollador;
-        this.publicador = publicador;
-        this.genero = genero;
+    public Modelo(String appid, String name, String short_description, String developer,
+                  String publisher, String genre, String tags, String type, String category,
+                  String owners, String positive, String negative, String price, String initialprice,
+                  String discount, String ccu, String languagues, Plataformas platforms,
+                  String release_date, String requiered_age, String website, String header_image) {
+        this.appid = appid;
+        this.name = name;
+        this.short_description = short_description;
+        this.developer = developer;
+        this.publisher = publisher;
+        this.genre = genre;
         this.tags = tags;
-        this.categorias = categorias;
-        this.comprados = comprados;
+        this.type = type;
+        this.category = category;
+        this.owners = owners;
+        this.positive = positive;
+        this.negative = negative;
+        this.price = price;
+        this.initialprice = initialprice;
+        this.discount = discount;
+        this.ccu = ccu;
+        this.languagues = languagues;
+        this.platforms = platforms;
+        this.release_date = release_date;
+        this.requiered_age = requiered_age;
+        this.website = website;
+        this.header_image = header_image;
     }
 
-    public Modelo() {
+    public String getAppid() {
+        return appid;
     }
 
-    public String getId() {
-        return id;
+    public void setAppid(String appid) {
+        this.appid = appid;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public String getName() {
+        return name;
     }
 
-    public String getTitulo() {
-        return titulo;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public String getShort_description() {
+        return short_description;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public void setShort_description(String short_description) {
+        this.short_description = short_description;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public String getDeveloper() {
+        return developer;
     }
 
-    public String getDesarrollador() {
-        return desarrollador;
+    public void setDeveloper(String developer) {
+        this.developer = developer;
     }
 
-    public void setDesarrollador(String desarrollador) {
-        this.desarrollador = desarrollador;
+    public String getPublisher() {
+        return publisher;
     }
 
-    public String getPublicador() {
-        return publicador;
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
     }
 
-    public void setPublicador(String publicador) {
-        this.publicador = publicador;
+    public String getGenre() {
+        return genre;
     }
 
-    public String getGenero() {
-        return genero;
-    }
-
-    public void setGenero(String genero) {
-        this.genero = genero;
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 
     public String getTags() {
@@ -83,19 +110,123 @@ public class Modelo {
         this.tags = tags;
     }
 
-    public String getCategorias() {
-        return categorias;
+    public String getType() {
+        return type;
     }
 
-    public void setCategorias(String categorias) {
-        this.categorias = categorias;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public String getComprados() {
-        return comprados;
+    public String getCategory() {
+        return category;
     }
 
-    public void setComprados(String comprados) {
-        this.comprados = comprados;
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getOwners() {
+        return owners;
+    }
+
+    public void setOwners(String owners) {
+        this.owners = owners;
+    }
+
+    public String getPositive() {
+        return positive;
+    }
+
+    public void setPositive(String positive) {
+        this.positive = positive;
+    }
+
+    public String getNegative() {
+        return negative;
+    }
+
+    public void setNegative(String negative) {
+        this.negative = negative;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public String getInitialprice() {
+        return initialprice;
+    }
+
+    public void setInitialprice(String initialprice) {
+        this.initialprice = initialprice;
+    }
+
+    public String getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(String discount) {
+        this.discount = discount;
+    }
+
+    public String getCcu() {
+        return ccu;
+    }
+
+    public void setCcu(String ccu) {
+        this.ccu = ccu;
+    }
+
+    public String getLanguagues() {
+        return languagues;
+    }
+
+    public void setLanguagues(String languagues) {
+        this.languagues = languagues;
+    }
+
+    public Plataformas getPlatforms() {
+        return platforms;
+    }
+
+    public void setPlatforms(Plataformas platforms) {
+        this.platforms = platforms;
+    }
+
+    public String getRelease_date() {
+        return release_date;
+    }
+
+    public void setRelease_date(String release_date) {
+        this.release_date = release_date;
+    }
+
+    public String getRequiered_age() {
+        return requiered_age;
+    }
+
+    public void setRequiered_age(String requiered_age) {
+        this.requiered_age = requiered_age;
+    }
+
+    public String getWebsite() {
+        return website;
+    }
+
+    public void setWebsite(String website) {
+        this.website = website;
+    }
+
+    public String getHeader_image() {
+        return header_image;
+    }
+
+    public void setHeader_image(String header_image) {
+        this.header_image = header_image;
     }
 }
