@@ -54,6 +54,9 @@ public class Modelo {
         this.header_image = header_image;
     }
 
+    public Modelo() {
+    }
+
     public String getAppid() {
         return appid;
     }
