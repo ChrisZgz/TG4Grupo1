@@ -21,7 +21,7 @@ public class Loging extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity_login);
 
         iniciar = findViewById(R.id.bntInicioSesion);
         usuario = findViewById(R.id.tNombre);
