@@ -1,7 +1,7 @@
 package com.example.tg4grupo1.Modelo;
 
 public class Modelo {
-    //esto esta en fasse de prueba darme mas tiempo XD
+    //esto esta en fase de prueba darme mas tiempo XD
     private String appid;
     private String name;
     private String short_description;
@@ -19,7 +19,7 @@ public class Modelo {
     private String discount;
     private String ccu;
     private String languagues;
-    private Plataformas platforms;
+    private String platforms;
     private String release_date;
     private String requiered_age;
     private String website;
@@ -28,7 +28,7 @@ public class Modelo {
     public Modelo(String appid, String name, String short_description, String developer,
                   String publisher, String genre, String tags, String type, String category,
                   String owners, String positive, String negative, String price, String initialprice,
-                  String discount, String ccu, String languagues, Plataformas platforms,
+                  String discount, String ccu, String languagues, String platforms,
                   String release_date, String requiered_age, String website, String header_image) {
         this.appid = appid;
         this.name = name;
@@ -56,7 +56,7 @@ public class Modelo {
 
     public Modelo(String name, String short_description, String developer, String publisher,
                   String genre, String type, String category, String price, String languagues,
-                  Plataformas platforms, String release_date, String requiered_age, String website,
+                  String platforms, String release_date, String requiered_age, String website,
                   String header_image) {
         this.name = name;
         this.short_description = short_description;
@@ -213,11 +213,11 @@ public class Modelo {
         this.languagues = languagues;
     }
 
-    public Plataformas getPlatforms() {
+    public String getPlatforms() {
         return platforms;
     }
 
-    public void setPlatforms(Plataformas platforms) {
+    public void setPlatforms(String platforms) {
         this.platforms = platforms;
     }
 
