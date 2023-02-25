@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#292C33"
-    tools:context=".Vistas.Splash">
+    tools:context=".Vistas.ListaSteam">
 
     <TextView
         android:id="@+id/textView"

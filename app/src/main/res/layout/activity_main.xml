@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#292C33"
-    tools:context=".Vistas.Main">
+    tools:context=".Vistas.Loging">
 
     <ScrollView
         android:id="@+id/scrContenedor"
