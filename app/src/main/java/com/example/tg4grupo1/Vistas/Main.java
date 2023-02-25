@@ -33,18 +33,21 @@ public class Main extends AppCompatActivity {
 
         codigo = findViewById(R.id.tLink);
         codigo.setMovementMethod(LinkMovementMethod.getInstance());
-        
 
         iniciar.setOnClickListener(v->{
-            if (usuario.getText().equals("")) {
-                Toast.makeText(null, "El campo usuario no puede quedar vacio", Toast.LENGTH_SHORT).show();
-            } else if (contrasena.getText().equals("")) {
-                Toast.makeText(null, "El campo contraseña no puede quedar vacio", Toast.LENGTH_SHORT).show();
-            }
-
-            if (usuario.getText().equals("admin") && contrasena.getText().equals("admin")) {
-                Toast.makeText(null, "Correcto!", Toast.LENGTH_SHORT).show();
-            }
+            logar();
         });
+    }
+
+    private void logar(){
+        if (usuario.getText().equals("")) {
+            Toast.makeText(null, "El campo usuario no puede quedar vacio", Toast.LENGTH_SHORT).show();
+        } else if (contrasena.getText().equals("")) {
+            Toast.makeText(null, "El campo contraseña no puede quedar vacio", Toast.LENGTH_SHORT).show();
+        }
+
+        if (usuario.getText().equals("admin") && contrasena.getText().equals("admin")) {
+            Toast.makeText(null, "Correcto!", Toast.LENGTH_SHORT).show();
+        }
     }
 }
