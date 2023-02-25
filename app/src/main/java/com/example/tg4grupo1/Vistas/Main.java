@@ -48,6 +48,8 @@ public class Main extends AppCompatActivity {
 
         if (usuario.getText().equals("admin") && contrasena.getText().equals("admin")) {
             Toast.makeText(null, "Correcto!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), Splash.class);
+            startActivity(intent);
         }
     }
 }
