@@ -26,15 +26,19 @@ public class ModeloAdo {
         helper.onCreate(db);
         for (int i = 0 ; i< parada.size(); i++) {
             ContentValues valores = new ContentValues();
-            valores.put("id", parada.get(i).getId().replace("\"","" ));
-            valores.put("titulo", parada.get(i).getTitulo().replace("\"","" ));
-            valores.put("descripcion", parada.get(i).getDescripcion().replace("\"", "" ));
-            valores.put("desarrollador", parada.get(i).getDesarrollador().replace("\"", "" ));
-            valores.put("publicador", parada.get(i).getPublicador().replace("\"","" ));
-            valores.put("genero", parada.get(i).getGenero().replace("\"","" ));
-            valores.put("tags", parada.get(i).getTags().replace("\"","" ));
-            valores.put("categorias", parada.get(i).getCategorias().replace("\"","" ));
-            valores.put("comprados", parada.get(i).getComprados().replace("\"","" ));
+            valores.put("titulo", parada.get(i).getName().replace("\"","" ));
+            valores.put("descripcion", parada.get(i).getShort_description().replace("\"", "" ));
+            valores.put("desarrollador", parada.get(i).getDeveloper().replace("\"", "" ));
+            valores.put("publicador", parada.get(i).getPublisher().replace("\"","" ));
+            valores.put("genero", parada.get(i).getGenre().replace("\"","" ));
+            valores.put("categorias", parada.get(i).getCategory().replace("\"","" ));
+            valores.put("precio", parada.get(i).getPrice().replace("\"","" ));
+            valores.put("lenguajes", parada.get(i).getLanguagues().replace("\"","" ));
+            valores.put("plataformas", parada.get(i).getPlatforms().replace("\"","" ));
+            valores.put("fechaDeSalida", parada.get(i).getRelease_date().replace("\"","" ));
+            valores.put("edadRequerida", parada.get(i).getRequiered_age().replace("\"","" ));
+            valores.put("web", parada.get(i).getWebsite().replace("\"","" ));
+            valores.put("cabecera", parada.get(i).getHeader_image().replace("\"","" ));
             helper.getWritableDatabase().insert("registros", null, valores);
         }
     }
