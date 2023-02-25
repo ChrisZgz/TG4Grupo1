@@ -74,15 +74,21 @@ public class DownloadJson extends AsyncTask<String, Void, String> {
         }
 
         for (int i = 0; i < objeto.size(); i++) {
-            modelos.add(new Modelo(objeto.get(i).get("id").toString(),
-                    objeto.get(i).get("title").toString(),
-                    objeto.get(i).get("description").toString(),
+            modelos.add(new Modelo(objeto.get(i).get("name").toString(),
+                    objeto.get(i).get("short_description").toString(),
                     objeto.get(i).get("developer").toString(),
                     objeto.get(i).get("publisher").toString(),
                     objeto.get(i).get("genre").toString(),
-                    objeto.get(i).get("tags").toString(),
-                    objeto.get(i).get("categories").toString(),
-                    objeto.get(i).get("purchased").toString()
+                    objeto.get(i).get("type").toString(),
+                    objeto.get(i).get("category").toString(),
+                    objeto.get(i).get("price").toString(),
+                    objeto.get(i).get("languagues").toString(),
+                    objeto.get(i).get("platforms").toString(),
+                    objeto.get(i).get("release_date").toString(),
+                    objeto.get(i).get("required_age").toString(),
+                    objeto.get(i).get("website").toString(),
+                    objeto.get(i).get("header_image").toString()
+
             ));
         }
         //aqui lo que hacemos es llamar el metodo para meter dentro de iconoImagen el
