@@ -69,6 +69,8 @@
         android:background="@drawable/estilo_edit_text"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textColor="#E1E4EB"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -93,6 +95,8 @@
         android:background="@drawable/estilo_edit_text"
         android:ems="10"
         android:inputType="textPassword"
+        android:textColor="#E1E4EB"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/tNombre"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/tNombre"
