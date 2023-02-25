@@ -54,6 +54,26 @@ public class Modelo {
         this.header_image = header_image;
     }
 
+    public Modelo(String name, String short_description, String developer, String publisher,
+                  String genre, String type, String category, String price, String languagues,
+                  Plataformas platforms, String release_date, String requiered_age, String website,
+                  String header_image) {
+        this.name = name;
+        this.short_description = short_description;
+        this.developer = developer;
+        this.publisher = publisher;
+        this.genre = genre;
+        this.type = type;
+        this.category = category;
+        this.price = price;
+        this.languagues = languagues;
+        this.platforms = platforms;
+        this.release_date = release_date;
+        this.requiered_age = requiered_age;
+        this.website = website;
+        this.header_image = header_image;
+    }
+
     public Modelo() {
     }
 
