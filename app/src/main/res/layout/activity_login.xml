@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:clickable="true"
-        android:text="Has olvidado tu usuario o tu contraseña?"
+        android:text="¿Has olvidado tu usuario o tu contraseña?"
         android:textColor="#E1E4EB"
         android:textSize="18sp"
         android:textStyle="bold"
