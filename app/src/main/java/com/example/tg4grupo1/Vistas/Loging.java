@@ -3,6 +3,7 @@ package com.example.tg4grupo1.Vistas;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 import android.widget.Button;
@@ -28,7 +29,11 @@ public class Loging extends AppCompatActivity {
         contrasena = findViewById(R.id.editTextTextPassword);
 
         codigo = findViewById(R.id.tLink);
-        codigo.setMovementMethod(LinkMovementMethod.getInstance());
+        codigo.setOnClickListener(v->{
+            String url = "https://help.steampowered.com/es/wizard/HelpWithLoging";
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            startActivity(intent);
+        });
 
         iniciar.setOnClickListener(v->{
             logar();
