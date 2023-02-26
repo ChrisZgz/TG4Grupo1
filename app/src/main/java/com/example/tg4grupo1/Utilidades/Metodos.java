@@ -2,10 +2,16 @@ package com.example.tg4grupo1.Utilidades;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+
 import com.example.tg4grupo1.Bbdd.DownloadJson;
+import com.example.tg4grupo1.R;
 import com.example.tg4grupo1.Vistas.ListaSteam;
 
 import java.io.File;
@@ -17,6 +23,7 @@ import java.util.concurrent.ExecutionException;
 public class Metodos {
 
     public static final String DBNAME = "steam.db";
+    private static AlertDialog dialogProgress;
 
     public static void descargarJson(Context contexto) {
         DownloadJson.insertarDatos(contexto);
@@ -53,6 +60,39 @@ public class Metodos {
                 null,
                 SQLiteDatabase.OPEN_READWRITE);
         return db;
+    }
+
+    public static void AlertProgressCerrar() {
+        dialogProgress.dismiss();
+    }
+
+    public static void AlertError(Context context) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View view = inflater.inflate(R.layout.alert_error, null);
+        builder.setView(view);
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+    }
+
+    public static void AlertProgres(Context context) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View view = inflater.inflate(R.layout.alert_cargando, null);
+        builder.setView(view);
+        dialogProgress = builder.create();
+        dialogProgress.setCanceledOnTouchOutside(false);
+        dialogProgress.show();
+    }
+
+    public static void AlertCreditos(Context context) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View view = inflater.inflate(R.layout.alert_creditos, null);
+        builder.setView(view);
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
 }
