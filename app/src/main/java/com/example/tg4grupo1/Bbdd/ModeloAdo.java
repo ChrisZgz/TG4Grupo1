@@ -16,7 +16,7 @@ public class ModeloAdo {
 
     private static final String ID = "id";
     private ModeloHelper helper;
-    private SQLiteDatabase db;
+    private static SQLiteDatabase db;
 
     public ModeloAdo(Context context) {
         helper = new ModeloHelper(context);
@@ -44,7 +44,7 @@ public class ModeloAdo {
         }
     }
 
-    public void recogerDatosNecesarios(ArrayList<Modelo> datos){
+    public static void recogerDatosNecesarios(ArrayList<Modelo> datos){
         String consultaSql = "SELECT * FROM registros";
         Cursor cursor = db.rawQuery(consultaSql, null);
 
