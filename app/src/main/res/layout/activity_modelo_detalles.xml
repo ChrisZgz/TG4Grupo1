@@ -69,6 +69,76 @@
             android:paddingBottom="15dp">
 
             <TextView
+                android:id="@+id/tDetPlataforma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/estilo_edit_text"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="15dp"
+                android:text="Plataforma"
+                android:textColor="#E1E4EB"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tDetTipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/estilo_edit_text"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="15dp"
+                android:text="Tipo"
+                android:textColor="#E1E4EB"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tDetGenero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/estilo_edit_text"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="15dp"
+                android:text="Genero"
+                android:textColor="#E1E4EB"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tDetEdadrequerida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/estilo_edit_text"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="15dp"
+                android:text="Edad requerida"
+                android:textColor="#E1E4EB"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tDetCategorias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/estilo_edit_text"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="15dp"
+                android:text="Categorias"
+                android:textColor="#E1E4EB"
+                android:textSize="16sp" />
+
+            <TextView
                 android:id="@+id/tDetDescripcion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -111,48 +181,6 @@
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/tDetGenero"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:background="@drawable/estilo_edit_text"
-                android:paddingLeft="15dp"
-                android:paddingTop="15dp"
-                android:paddingRight="15dp"
-                android:paddingBottom="15dp"
-                android:text="Genero"
-                android:textColor="#E1E4EB"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/tDetTipo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:background="@drawable/estilo_edit_text"
-                android:paddingLeft="15dp"
-                android:paddingTop="15dp"
-                android:paddingRight="15dp"
-                android:paddingBottom="15dp"
-                android:text="Tipo"
-                android:textColor="#E1E4EB"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/tDetCategorias"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:background="@drawable/estilo_edit_text"
-                android:paddingLeft="15dp"
-                android:paddingTop="15dp"
-                android:paddingRight="15dp"
-                android:paddingBottom="15dp"
-                android:text="Categorias"
-                android:textColor="#E1E4EB"
-                android:textSize="16sp" />
-
-            <TextView
                 android:id="@+id/tDetLenguaje"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -167,7 +195,7 @@
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/tDetPlataforma"
+                android:id="@+id/tDetWeb"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
@@ -176,7 +204,7 @@
                 android:paddingTop="15dp"
                 android:paddingRight="15dp"
                 android:paddingBottom="15dp"
-                android:text="Plataforma"
+                android:text="Página web"
                 android:textColor="#E1E4EB"
                 android:textSize="16sp" />
 
@@ -191,34 +219,6 @@
                 android:paddingRight="15dp"
                 android:paddingBottom="15dp"
                 android:text="Fecha de salida"
-                android:textColor="#E1E4EB"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/tDetEdadrequerida"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:background="@drawable/estilo_edit_text"
-                android:paddingLeft="15dp"
-                android:paddingTop="15dp"
-                android:paddingRight="15dp"
-                android:paddingBottom="15dp"
-                android:text="Edad requerida"
-                android:textColor="#E1E4EB"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/tDetWeb"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:background="@drawable/estilo_edit_text"
-                android:paddingLeft="15dp"
-                android:paddingTop="15dp"
-                android:paddingRight="15dp"
-                android:paddingBottom="15dp"
-                android:text="Página web"
                 android:textColor="#E1E4EB"
                 android:textSize="16sp" />
 
