@@ -30,7 +30,7 @@ public class Metodos {
         DownloadJson json = new DownloadJson();
 
         try {
-            json.execute("https://drive.google.com/u/0/uc?id=1UUC9MmnN9aUf6_wLcxcPmSXSjbyglpbx&export=download").get();
+            json.execute("https://drive.google.com/u/0/uc.json?id=1UUC9MmnN9aUf6_wLcxcPmSXSjbyglpbx&export=download").get();
         } catch (ExecutionException | InterruptedException e) {
             e.printStackTrace();
         }
