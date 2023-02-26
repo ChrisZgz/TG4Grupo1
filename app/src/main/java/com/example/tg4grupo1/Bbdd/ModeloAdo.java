@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.view.Display;
 
 import com.example.tg4grupo1.Modelo.Modelo;
 import com.example.tg4grupo1.Utilidades.Metodos;
@@ -41,5 +42,33 @@ public class ModeloAdo {
             valores.put("cabecera", parada.get(i).getHeader_image().replace("\"","" ));
             helper.getWritableDatabase().insert("registros", null, valores);
         }
+    }
+
+    public void recogerDatosNecesarios(ArrayList<Modelo> datos){
+        String consultaSql = "SELECT * FROM registros";
+        Cursor cursor = db.rawQuery(consultaSql, null);
+
+        while (cursor.moveToNext()){
+            Modelo dato = new Modelo();
+            dato.setName(cursor.getString(1));
+            dato.setShort_description(cursor.getString(2));
+            dato.setDeveloper(cursor.getString(3));
+            dato.setPublisher(cursor.getString(4));
+            dato.setGenre(cursor.getString(5));
+            dato.setCategory(cursor.getString(6));
+            dato.setPrice(cursor.getString(7));
+            dato.setLanguagues(cursor.getString(8));
+            dato.setPlatforms(cursor.getString(9));
+            dato.setRelease_date(cursor.getString(10));
+            dato.setRequiered_age(cursor.getString(11));
+            dato.setWebsite(cursor.getString(12));
+            dato.setHeader_image(cursor.getString(13));
+            datos.add(dato);
+        }
+
+    }
+
+    public void close() throws Exception {
+        db.close();
     }
 }
