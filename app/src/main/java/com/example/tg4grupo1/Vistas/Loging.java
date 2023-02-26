@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.text.method.LinkMovementMethod;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -26,7 +25,7 @@ public class Loging extends AppCompatActivity {
 
         iniciar = findViewById(R.id.bntInicioSesion);
         usuario = findViewById(R.id.tNombre);
-        contrasena = findViewById(R.id.editTextTextPassword);
+        contrasena = findViewById(R.id.passContra);
 
         codigo = findViewById(R.id.tLink);
         codigo.setOnClickListener(v->{
