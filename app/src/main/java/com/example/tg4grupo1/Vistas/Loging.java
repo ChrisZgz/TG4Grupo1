@@ -47,7 +47,10 @@ public class Loging extends AppCompatActivity {
         }
 
         if (usuario.getText().toString().equals("admin") && contrasena.getText().toString().equals("admin")) {
+
+
             Intent intent = new Intent(getApplicationContext(), ListaSteam.class);
+
             startActivity(intent);
         }
     }

@@ -1,6 +1,8 @@
 package com.example.tg4grupo1.Modelo;
 
-public class Modelo {
+import java.io.Serializable;
+
+public class Modelo implements Serializable {
     //esto esta en fase de prueba darme mas tiempo XD
     private String appid;
     private String name;
