@@ -2,8 +2,11 @@ package com.example.tg4grupo1.Bbdd;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.os.Handler;
+import android.os.Looper;
 
 import com.example.tg4grupo1.Modelo.Modelo;
+import com.example.tg4grupo1.Utilidades.Metodos;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -28,9 +31,9 @@ public class DownloadJson extends AsyncTask<String, Void, String> {
 
     @Override
     protected void onPreExecute(){
-      /*  if (modelos.size() != 0){
-            AlertDialogs.AlertProgres(CONTEXT);
-        }*/
+        if (modelos.size() != 0){
+            Metodos.AlertProgres(CONTEXT);
+        }
     }
 
     @Override
@@ -96,14 +99,14 @@ public class DownloadJson extends AsyncTask<String, Void, String> {
 
     private static Boolean bb = false;
     @Override
-    protected void onPostExecute(String bitmap) { /*
+    protected void onPostExecute(String bitmap) {
         if (bb){
             Handler handler = new Handler(Looper.myLooper());
             handler.postDelayed(()->{
-                AlertDialogs.AlertProgressCerrar();
+                Metodos.AlertProgressCerrar();
             },2000);
         }
         bb = true;
-        */
+
     }
 }
