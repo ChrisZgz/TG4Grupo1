@@ -6,6 +6,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.tg4grupo1.Bbdd.DownloadJson;
+import com.example.tg4grupo1.Vistas.ListaSteam;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -16,6 +17,17 @@ import java.util.concurrent.ExecutionException;
 public class Metodos {
 
     public static final String DBNAME = "steam.db";
+
+    public static void descargarJson(Context contexto) {
+        DownloadJson.insertarDatos(contexto);
+        DownloadJson json = new DownloadJson();
+
+        try {
+            json.execute("https://drive.google.com/u/0/uc?id=1UUC9MmnN9aUf6_wLcxcPmSXSjbyglpbx&export=download").get();
+        } catch (ExecutionException | InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static void inicializarSqlite(Context context, String name, int idRes){
         File dbFile = context.getDatabasePath(name);

@@ -18,8 +18,6 @@ import java.util.List;
 
 public class DownloadJson extends AsyncTask<String, Void, String> {
 
-
-
     private static Context CONTEXT;
     private static String result = "";
     public static ArrayList<Modelo> modelos = new ArrayList<>();
@@ -91,16 +89,6 @@ public class DownloadJson extends AsyncTask<String, Void, String> {
 
             ));
         }
-        //aqui lo que hacemos es llamar el metodo para meter dentro de iconoImagen el
-        //bitmap para utilizarlo luego en la inserción de datos
-
-        //downloadImage(modelos.get(0).getIcono().replace("\"", ""));
-
-        //aqui lo que hacemos es meter los datos dentro de la base de datos, para luego hacer
-        //las consultas correspondiente a esta
-
-//        ModeloHelper modeloHelper = new ModeloHelper(CONTEXT);
-//        modeloHelper.getWritableDatabase();
 
         ModeloAdo modeloAdo = new ModeloAdo(CONTEXT);
         modeloAdo.insertarJuegos(modelos);
