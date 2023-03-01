@@ -5,7 +5,7 @@ import android.os.AsyncTask;
 import android.os.Handler;
 import android.os.Looper;
 
-import com.example.tg4grupo1.Modelo.Modelo;
+import com.example.tg4grupo1.Modelo.Steam;
 import com.example.tg4grupo1.Utilidades.Metodos;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
@@ -23,7 +23,7 @@ public class DownloadJson extends AsyncTask<String, Void, String> {
 
     private static Context CONTEXT;
     private static String result = "";
-    public static ArrayList<Modelo> modelos = new ArrayList<>();
+    public static ArrayList<Steam> modelos = new ArrayList<Steam>();
 
     public static void insertarDatos(Context context) {
         CONTEXT = context;
@@ -73,40 +73,25 @@ public class DownloadJson extends AsyncTask<String, Void, String> {
         for (int i = 0; i < lista.size(); i++) {
             objeto.add((JsonObject) lista.get(i));
         }
-
+        List<JsonObject> geome = new ArrayList<>();
         for (int i = 0; i < objeto.size(); i++) {
-            modelos.add(new Modelo(objeto.get(i).get("name").toString(),
-                    objeto.get(i).get("short_description").toString(),
-                    objeto.get(i).get("developer").toString(),
-                    objeto.get(i).get("publisher").toString(),
-                    objeto.get(i).get("genre").toString(),
-                    objeto.get(i).get("type").toString(),
-                    objeto.get(i).get("category").toString(),
-                    objeto.get(i).get("price").toString(),
-                    objeto.get(i).get("languagues").toString(),
-                    objeto.get(i).get("platforms").toString(),
-                    objeto.get(i).get("release_date").toString(),
-                    objeto.get(i).get("required_age").toString(),
-                    objeto.get(i).get("website").toString(),
-                    objeto.get(i).get("header_image").toString()
+            geome.add((JsonObject) objeto.get(i).get("geometry"));
 
+            modelos.add(new Steam(objeto.get(i).get("id").toString(),
+                    objeto.get(i).get("name").toString()
             ));
         }
-
-        ModeloAdo modeloAdo = new ModeloAdo(CONTEXT);
-        modeloAdo.insertarJuegos(modelos);
     }
 
     private static Boolean bb = false;
-    @Override
-    protected void onPostExecute(String bitmap) {
-        if (bb){
-            Handler handler = new Handler(Looper.myLooper());
-            handler.postDelayed(()->{
-                Metodos.AlertProgressCerrar();
-            },2000);
+        @Override
+        protected void onPostExecute(String bitmap) {
+            if (bb){
+                Handler handler = new Handler(Looper.myLooper());
+                handler.postDelayed(()->{
+                    Metodos.AlertProgressCerrar();
+                },2000);
+            }
+            bb = true;
         }
-        bb = true;
-
-    }
 }

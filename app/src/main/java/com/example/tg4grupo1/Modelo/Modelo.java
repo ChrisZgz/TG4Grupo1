@@ -4,57 +4,20 @@ import java.io.Serializable;
 
 public class Modelo implements Serializable {
     //esto esta en fase de prueba darme mas tiempo XD
-    private String appid;
     private String name;
     private String short_description;
     private String developer;
     private String publisher;
     private String genre;
-    private String tags;
     private String type;
     private String category;
-    private String owners;
-    private String positive;
-    private String negative;
     private String price;
-    private String initialprice;
-    private String discount;
-    private String ccu;
     private String languagues;
     private String platforms;
     private String release_date;
     private String requiered_age;
     private String website;
     private String header_image;
-
-    public Modelo(String appid, String name, String short_description, String developer,
-                  String publisher, String genre, String tags, String type, String category,
-                  String owners, String positive, String negative, String price, String initialprice,
-                  String discount, String ccu, String languagues, String platforms,
-                  String release_date, String requiered_age, String website, String header_image) {
-        this.appid = appid;
-        this.name = name;
-        this.short_description = short_description;
-        this.developer = developer;
-        this.publisher = publisher;
-        this.genre = genre;
-        this.tags = tags;
-        this.type = type;
-        this.category = category;
-        this.owners = owners;
-        this.positive = positive;
-        this.negative = negative;
-        this.price = price;
-        this.initialprice = initialprice;
-        this.discount = discount;
-        this.ccu = ccu;
-        this.languagues = languagues;
-        this.platforms = platforms;
-        this.release_date = release_date;
-        this.requiered_age = requiered_age;
-        this.website = website;
-        this.header_image = header_image;
-    }
 
     public Modelo(String name, String short_description, String developer, String publisher,
                   String genre, String type, String category, String price, String languagues,
@@ -79,13 +42,6 @@ public class Modelo implements Serializable {
     public Modelo() {
     }
 
-    public String getAppid() {
-        return appid;
-    }
-
-    public void setAppid(String appid) {
-        this.appid = appid;
-    }
 
     public String getName() {
         return name;
@@ -127,14 +83,6 @@ public class Modelo implements Serializable {
         this.genre = genre;
     }
 
-    public String getTags() {
-        return tags;
-    }
-
-    public void setTags(String tags) {
-        this.tags = tags;
-    }
-
     public String getType() {
         return type;
     }
@@ -151,60 +99,12 @@ public class Modelo implements Serializable {
         this.category = category;
     }
 
-    public String getOwners() {
-        return owners;
-    }
-
-    public void setOwners(String owners) {
-        this.owners = owners;
-    }
-
-    public String getPositive() {
-        return positive;
-    }
-
-    public void setPositive(String positive) {
-        this.positive = positive;
-    }
-
-    public String getNegative() {
-        return negative;
-    }
-
-    public void setNegative(String negative) {
-        this.negative = negative;
-    }
-
     public String getPrice() {
         return price;
     }
 
     public void setPrice(String price) {
         this.price = price;
-    }
-
-    public String getInitialprice() {
-        return initialprice;
-    }
-
-    public void setInitialprice(String initialprice) {
-        this.initialprice = initialprice;
-    }
-
-    public String getDiscount() {
-        return discount;
-    }
-
-    public void setDiscount(String discount) {
-        this.discount = discount;
-    }
-
-    public String getCcu() {
-        return ccu;
-    }
-
-    public void setCcu(String ccu) {
-        this.ccu = ccu;
     }
 
     public String getLanguagues() {

@@ -11,9 +11,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.tg4grupo1.R;
+import com.example.tg4grupo1.Utilidades.Metodos;
 
 public class Loging extends AppCompatActivity {
     Button iniciar;
+    Button creditos;
     EditText usuario;
     EditText contrasena;
     TextView codigo;
@@ -24,6 +26,7 @@ public class Loging extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         iniciar = findViewById(R.id.bntInicioSesion);
+        creditos = findViewById(R.id.btnCreditos);
         usuario = findViewById(R.id.tNombre);
         contrasena = findViewById(R.id.passContra);
 
@@ -36,6 +39,10 @@ public class Loging extends AppCompatActivity {
 
         iniciar.setOnClickListener(v->{
             logar();
+        });
+
+        creditos.setOnClickListener(v -> {
+            Metodos.AlertCreditos(this);
         });
     }
 

@@ -23,14 +23,9 @@ public class Splash extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         Metodos.descargarJson(this);
-        ArrayList<Modelo> lista = new ArrayList<>();
-        ModeloAdo.recogerDatosNecesarios(lista);
-
-
         Handler handler = new Handler(Looper.myLooper());
         handler.postDelayed(()->{
             Intent intent = new Intent(getApplicationContext(), Loging.class);
-            intent.putExtra("lista", lista);
             startActivity(intent);
             finish();
         },5000);

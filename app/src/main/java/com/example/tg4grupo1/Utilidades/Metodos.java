@@ -4,20 +4,18 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 
 import com.example.tg4grupo1.Bbdd.DownloadJson;
 import com.example.tg4grupo1.R;
-import com.example.tg4grupo1.Vistas.ListaSteam;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.concurrent.ExecutionException;
 
 public class Metodos {
@@ -30,10 +28,11 @@ public class Metodos {
         DownloadJson json = new DownloadJson();
 
         try {
-            json.execute("https://drive.google.com/u/0/uc.json?id=1UUC9MmnN9aUf6_wLcxcPmSXSjbyglpbx&export=download").get();
+            json.execute("https://api.steampowered.com/ISteamApps/GetAppList/v2/?format=json").get();
         } catch (ExecutionException | InterruptedException e) {
             e.printStackTrace();
         }
+
     }
 
     public static void inicializarSqlite(Context context, String name, int idRes){
